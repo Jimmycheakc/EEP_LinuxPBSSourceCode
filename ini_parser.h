@@ -34,6 +34,13 @@ public:
     bool FnGetShowTime() const;
     std::string FnGetBlockIUPrefix() const;
 
+    // [EEP]
+    std::string FnGetEEPClientIp() const;
+    int FnGetEEPClientPort() const;
+    int FnGetEEPSourceId() const;
+    int FnGetEEPDestinationId() const;
+    int FnGetEEPCarparkID() const;
+
     // Confirm [DI]
     int FnGetLoopA() const;
     int FnGetLoopC() const;
@@ -86,6 +93,13 @@ private:
     std::string LPRErrorCount_;
     bool ShowTime_;
     std::string BlockIUPrefix_;
+
+    // [EEP]
+    std::string EEPClientIp_;
+    int EEPClientPort_;
+    int EEPSourceId_;
+    int EEPDestinationId_;
+    int EEPCarparkID_;
 
     // Confirm [DI]
     int LoopA_;

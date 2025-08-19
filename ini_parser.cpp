@@ -70,6 +70,12 @@ void IniParser::FnReadIniFile()
         ShowTime_                       = (std::stoi(pt.get<std::string>("setting.ShowTime", "")) == 1) ? true : false;
         BlockIUPrefix_                  = pt.get<std::string>("setting.BlockIUPrefix", "");
 
+        EEPClientIp_                    = pt.get<std::string>("EEP.EEPClientIp", "");
+        EEPClientPort_                  = pt.get<int>("EEP.EEPClientPort");
+        EEPSourceId_                    = pt.get<int>("EEP.EEPSourceId");
+        EEPDestinationId_               = pt.get<int>("EEP.EEPDestinationId");
+        EEPCarparkID_                   = pt.get<int>("EEP.EEPCarparkID");
+
         // Confirm [DI]
         LoopA_                          = pt.get<int>("DI.LoopA");
         LoopC_                          = pt.get<int>("DI.LoopC");
@@ -244,6 +250,32 @@ bool IniParser::FnGetShowTime() const
 std::string IniParser::FnGetBlockIUPrefix() const
 {
     return BlockIUPrefix_;
+}
+
+// [EEP]
+std::string IniParser::FnGetEEPClientIp() const
+{
+    return EEPClientIp_;
+}
+
+int IniParser::FnGetEEPClientPort() const
+{
+    return EEPClientPort_;
+}
+
+int IniParser::FnGetEEPSourceId() const
+{
+    return EEPSourceId_;
+}
+
+int IniParser::FnGetEEPDestinationId() const
+{
+    return EEPDestinationId_;
+}
+
+int IniParser::FnGetEEPCarparkID() const
+{
+    return EEPCarparkID_;
 }
 
 // Confirm [DI]

@@ -63,6 +63,8 @@ set(SOURCE_FILES
     ksm_reader.cpp
     printer.cpp
     barcode_reader.cpp
+    tcp_client.cpp
+    eep_client.cpp
     main.cpp
 )
 
